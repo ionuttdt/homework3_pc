@@ -1,0 +1,53 @@
+DUTA VIOREL-IONUT
+321CB
+TEMA 3 PC
+Punctaj: 10/10
+
+================================= OBSERVATII ==================================
+	
+	La parsare am folosit biblioteca json pentru a extrage informatiile necesare
+cererii HTTP. Principalul motiv pentru care am folosit acessta biblioteca a fost
+formatul datelor pe care le primim in urma rezolvarii unui task.
+	Punctul de pornire in rezolvarea temei l-a reprezentat laboratorul de HTTP,
+fiind si rezolvarea primului task.
+	Am construit in plus fata de scheletul laboratorului functiile 
+compute_post_request2 si *compute_get_request2 pentru a adauga in cererea HTTP
+elementele parsate.
+
+=================================== TASK 1 ====================================
+	
+	Pentru a rezolva acestui task am modificat ip-ul si url-ul din laboratorul
+de HTTP si am trimis cererea.
+
+=================================== TASK 2 ====================================
+
+	Folosind functia strtok am luat cookie-urile primite si le-am concatenat 
+pentru a le trimite ca parametru functiei post.
+	Urmatorul pas l-a reprezentat parsarea stringului in format json folosind
+functiile puse la dispozitie din biblioteca json-c. Din acest string am extres
+enunt, url, method, type si data (pentru data am mai facut o parsare pentru a 
+obtine username si password). Dupa parsare am 	construit stringurile intr-un 
+format necesar cererii HTTP.
+
+=================================== TASK 3 ====================================
+
+	Modul in care am solutionat acest task este similar cu taskul anterior, 
+singura diferenta fiind tipul cererii (GET) si elementele parsate din format 
+json (enunt, url si method si data din care trebuie extras tokenul si queryParams
+pentru a putrea trimite cererea GET). Cookie-urile le-am parsat exact ca la 
+taskul 2. Pentru campul data am folosit tot functiile din biblioteca json (fiind
+tot in acelasi format).
+	Dupa ce am parsat toate elementele am apelat functia compute_get_request2
+cu parametri obtinuti.
+
+=================================== TASK 4 ====================================
+
+	Taskul 4 este similar taskului 3, pe langa informatiile obtinute din parsare
+am mai folosit si tokenul de la taskul 3.
+
+=================================== TASK 5 ====================================
+
+	Am urmat pasii cerintei (am trimis cererea pentru a obtine datele) si dupa
+am trimis catre server temperatura. Parsarea este similara cu cele de mai sus.
+
+===============================================================================
